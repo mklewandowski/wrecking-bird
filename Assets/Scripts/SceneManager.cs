@@ -151,7 +151,7 @@ public class SceneManager : MonoBehaviour
         HUDTopScore.SetActive(false);
         Player.transform.localPosition = new Vector2(-1.85f, 2f);
         Player.SetActive(true);
-        initPipes();
+        InitPipes();
     }
 
     void UpdateGetReadyState()
@@ -177,8 +177,8 @@ public class SceneManager : MonoBehaviour
             if (Ground[i].transform.localPosition.x < groundMinX)
             {
                 int abutIndex = i == Ground.Length - 1 ? 0 : i + 1;
-                Ground[i].transform.localPosition =  new Vector2(
-                        Ground[abutIndex].transform.localPosition.x +  Ground[abutIndex].GetComponent<Renderer>().bounds.size.x,
+                Ground[i].transform.localPosition = new Vector2(
+                        Ground[abutIndex].transform.localPosition.x + Ground[abutIndex].GetComponent<Renderer>().bounds.size.x,
                         Ground[i].transform.localPosition.y
                     );
             }
@@ -263,7 +263,7 @@ public class SceneManager : MonoBehaviour
         }
     }
 
-    void initPipes()
+    void InitPipes()
     {
         for (int i = 0; i < TopPipes.Length; i++)
         {

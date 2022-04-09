@@ -7,7 +7,7 @@ public class CameraZoom : MonoBehaviour
     public void SetOrthographicSize()
     {
         float aspectRatioHW = (float)Screen.height / (float)Screen.width;
-        float artMaxWidth = 720;
+        float artMaxWidth = 768;
         float orthographicSize = artMaxWidth * aspectRatioHW / 200f;
         Debug.Log("Setting camera orthographicSize: " + orthographicSize);
         this.GetComponent<Camera>().orthographicSize = orthographicSize;

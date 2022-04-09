@@ -269,8 +269,8 @@ public class SceneManager : MonoBehaviour
         {
             // randomize the y position of pipes
             float startY = Random.Range (0.0f, 3.5f);
-            Vector2 newTopPos = new Vector2 (9f + i * 5f, 10f - startY);
-            Vector2 newBottomPos = new Vector2 (9f + i * 5f, -2.85f - startY);
+            Vector2 newTopPos = new Vector2 (9f + i * 5f, 8.9f - startY);
+            Vector2 newBottomPos = new Vector2 (9f + i * 5f, -3.85f - startY);
             TopPipes[i].transform.localPosition = newTopPos;
             BottomPipes[i].transform.localPosition = newBottomPos;
         }

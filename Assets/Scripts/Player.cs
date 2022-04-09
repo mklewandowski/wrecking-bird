@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     float minVelocity = -6f;
     float minY = -2.9f;
     float maxY = 5.4f;
+    float screenMaxY = 5.4f;
 
     AudioSource audioSource;
 
@@ -23,6 +24,14 @@ public class Player : MonoBehaviour
     void Awake()
     {
         audioSource = GameObject.Find("SceneManager").GetComponent<AudioSource>();
+    }
+
+    void Start()
+    {
+        Vector3 screenCorner = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
+        float screenMax = screenCorner.y * -1f;
+        float characterOffset = .9f;
+        screenMaxY = Mathf.Min(maxY, screenMax - characterOffset);
     }
 
     // Update is called once per frame
@@ -55,9 +64,9 @@ public class Player : MonoBehaviour
                 Globals.CurrentGameState = Globals.GameState.Dead;
             }
             // limit Miley Y pos to stay onscreen
-            if (transform.localPosition.y > maxY)
+            if (transform.localPosition.y > screenMaxY)
             {
-                Vector2 maxTopPos = new Vector2 (transform.localPosition.x, maxY - .1f);
+                Vector2 maxTopPos = new Vector2 (transform.localPosition.x, screenMaxY - .1f);
                 transform.localPosition = maxTopPos;
             }
         }

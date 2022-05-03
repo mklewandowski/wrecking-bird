@@ -18,7 +18,7 @@ Use the following steps to run locally:
 3. Install Text Mesh Pro
 
 ## Development Tools
-- Created using Unity 2020.3.10f.1
+- Created using Unity 2021.3.0f.1
 - Code edited using Visual Studio Code
 - Sounds created using [Bfxr](https://www.bfxr.net/)
 - Audio edited using [Audacity](https://www.audacityteam.org/)

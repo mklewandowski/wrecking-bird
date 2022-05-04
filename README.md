@@ -4,6 +4,8 @@ Way back in February of 2014 I played Flappy Bird for the first time. I showed i
 ## Gameplay
 Wrecking Bird is a simple clone of Dong Nguyen's iconic [Flappy Bird](https://flappybird.io/). You'll need laser focus and precision tapping as you navigate through an endless field of Mario-esque pipes (and, yes, the hitboxes are as unforgiving as in the original). 
 
+![Wrecking Bird gameplay](https://github.com/mklewandowski/wrecking-bird/blob/main/Assets/Images/wreckingbird.gif?raw=true)
+
 ## Supported Platforms
 Wrecking Bird is designed for use on multiple platforms including:
 - iOS
@@ -11,7 +13,7 @@ Wrecking Bird is designed for use on multiple platforms including:
 - Web
 - Mac and PC standalone builds
 
-## Running locally
+## Running Locally
 Use the following steps to run locally:
 1. Clone this repo
 2. Open repo folder using Unity 2021.3.0f.1
